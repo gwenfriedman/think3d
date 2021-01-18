@@ -104,7 +104,7 @@
       $.ajax({
         type: "GET",
         //YOUR TURN: Replace with csv export link
-        url: 'https://docs.google.com/spreadsheets/d/1ls2URsnVuoJsMT_Bwrw4BzwpjLI7lB_By9d05BN_D3M/edit?usp=sharing',
+        url: 'https://docs.google.com/spreadsheets/d/1ls2URsnVuoJsMT_Bwrw4BzwpjLI7lB_By9d05BN_D3M/gviz/tq?tqx=out:csv&sheet={Think3d!_locations}',
         dataType: "text",
         success: function (csvData) { makeGeoJSON(csvData); }
       });
@@ -112,14 +112,12 @@
 
 
       function makeGeoJSON(csvData) {
-        console.log('cvsData', csvData);
         csv2geojson.csv2geojson(csvData, {
           latfield: 'Latitude',
           lonfield: 'Longitude',
           delimiter: ','
         }, function (err, data) {
           map.on('load', function () {
-
             //Add the the layer to the map 
             map.addLayer({
               'id': 'csvData',
@@ -139,7 +137,6 @@
             // location of the feature, with description HTML from its properties.
             map.on('click', 'csvData', function (e) {
               var coordinates = e.features[0].geometry.coordinates.slice();
-              console.log('coordinates', coordinates);
 
               //set popup text 
               //You can adjust the values of the popup to match the headers of your CSV. 
