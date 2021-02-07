@@ -141,20 +141,20 @@
               //set popup text 
               //You can adjust the values of the popup to match the headers of your CSV. 
               // For example: e.features[0].properties.Name is retrieving information from the field Name in the original CSV. 
-              var description = `<h3>` + e.features[0].properties.School + `</h3>` + `<h4>` + 
-                `<b>` + `Address: ` + `</b>` + e.features[0].properties.Address + `</h4>` + `<h4>` +
-                `<b>` + `Number of classrooms who are currently using or want to use Think3d: ` + `</b>` + e.features[0].properties['Number of classrooms who are currently using or want to use Think3d'] + `</h4>` + `<h4>`
+              var description = `<h3>` + e.features[0].properties.School + `</h3>` +  
+              `<h4>` + `<b>` + `Address: ` + `</b>` + e.features[0].properties.Address + `</h4>`
+              `<h4>` + `<b>` + `Number of classrooms who are currently using or want to use Think3d: ` + `</b>` + e.features[0].properties['Number of classrooms who are currently using or want to use Think3d'] + `</h4>`
               
               if (e.features[0].properties['Grades of students using Think3d'] != '') {
-                description= description + `<b>` + `Grades of students using Think3d: ` + `</b>` + e.features[0].properties['Grades of students using Think3d'] + `</h4>` + `<h4>`
+                description= description + `<h4>` + `<b>` + `Grades of students using Think3d: ` + `</b>` + e.features[0].properties['Grades of students using Think3d'] + `</h4>`
                  }
 
               if (e.features[0].properties.Website != '') {
-                description = description + `<b>` + `Website: ` + `</b>` + e.features[0].properties.Website + `</h4>` + `<h4>`
+                description = description + `<h4>` + `<b>` + `Website: ` + `</b>` + `<a>` + e.features[0].properties.Website + `</a>`+ `</h4>`
               }
 
               if (e.features[0].properties['Case Study'] != '') {
-                description = description + `<b>` + `Case Study: ` + `</b>` + e.features[0].properties['Case Study'] + `</h4>` + `<h4>`
+                description = description + `<h4>` + `<b>` + `Case Study: ` + `</b>` + e.features[0].properties['Case Study'] + `</h4>
               }
 
               // Ensure that if the map is zoomed out such that multiple
