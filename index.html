@@ -142,7 +142,7 @@
               //You can adjust the values of the popup to match the headers of your CSV. 
               // For example: e.features[0].properties.Name is retrieving information from the field Name in the original CSV. 
               var description = `<h3>` + e.features[0].properties.School + `</h3>` +  
-              `<h4>` + `<b>` + `Address: ` + `</b>` + e.features[0].properties.Address + `</h4>`
+              `<h4>` + `<b>` + `Address: ` + `</b>` + e.features[0].properties.Address + `</h4>` +
               `<h4>` + `<b>` + `Number of classrooms who are currently using or want to use Think3d: ` + `</b>` + e.features[0].properties['Number of classrooms who are currently using or want to use Think3d'] + `</h4>`;
               
               if (e.features[0].properties['Grades of students using Think3d'] != '') {
@@ -150,7 +150,7 @@
                  }
 
               if (e.features[0].properties.Website != '') {
-                description = description + `<a href=` + e.features[0].properties.Website + `>` `School Website` + `</a>`;
+                description = description + `<a href=` + e.features[0].properties.Website + `>` `Website` + `</a>`;
               }
 
               if (e.features[0].properties['Case Study'] != '') {
