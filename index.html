@@ -141,21 +141,20 @@
               //set popup text 
               //You can adjust the values of the popup to match the headers of your CSV. 
               // For example: e.features[0].properties.Name is retrieving information from the field Name in the original CSV. 
-              var description = `<h3>` + e.features[0].properties.School + `</h3>` + `<h4>` + `<b>` +
-                 `Address: ` + `</b>` + e.features[0].properties.Address + `</h4>` + `<h4>` +
-                 `Grades of students using Think3d: ` + `</b>` + e.features[0].properties['Grades of students using Think3d'] + `</h4>` + `<h4>`;
-
+              var description = `<h3>` + e.features[0].properties.School + `</h3>` + `<h4>` + 
+                `<b>` + `Address: ` + `</b>` + e.features[0].properties.Address + `</h4>` + `<h4>` +
+                `<b>` + `Number of classrooms who are currently using or want to use Think3d: ` + `</b>` + e.features[0].properties['Number of classrooms who are currently using or want to use Think3d'] + `</h4>` + `<h4>`
               
-              if (e.features[0].properties['Number of classrooms who are currently using or want to use Think3d'] != '') {
-                 description + `Number of classrooms who are currently using or want to use Think3d: ` + `</b>` + e.features[0].properties['Number of classrooms who are currently using or want to use Think3d'] + `</h4>` + `<h4>`
+              if (e.features[0].properties['Grades of students using Think3d'] != '') {
+                `<b>` + description + `Grades of students using Think3d: ` + `</b>` + e.features[0].properties['Grades of students using Think3d'] + `</h4>` + `<h4>`
                  }
 
               if (e.features[0].properties['Website'] != '') {
-              description + `Website: ` + `</b>` + e.features[0].properties['Website'] + `</h4>` + `<h4>`
+              description + `<b>` + `Website: ` + `</b>` + e.features[0].properties['Website'] + `</h4>` + `<h4>`
               }
 
               if (e.features[0].properties['Case Study'] != '') {
-              description + `Case Study: ` + `</b>` + e.features[0].properties['Case Study'] + `</h4>` + `<h4>`
+              description + `<b>` + `Case Study: ` + `</b>` + e.features[0].properties['Case Study'] + `</h4>` + `<h4>`
               }
 
               // Ensure that if the map is zoomed out such that multiple
