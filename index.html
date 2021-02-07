@@ -146,11 +146,11 @@
               `<h4>` + `<b>` + `Number of classrooms who are currently using or want to use Think3d: ` + `</b>` + e.features[0].properties['Number of classrooms who are currently using or want to use Think3d'] + `</h4>`;
               
               if (e.features[0].properties['Grades of students using Think3d'] != '') {
-                description= description + `<h4>` + `<b>` + `Grades of students using Think3d: ` + `</b>` + e.features[0].properties['Grades of students using Think3d'] + `</h4>`;
+                description = description + `<h4>` + `<b>` + `Grades of students using Think3d: ` + `</b>` + e.features[0].properties['Grades of students using Think3d'] + `</h4>`;
                  }
 
               if (e.features[0].properties.Website != '') {
-                description = description + `<h4>` + `<b>` + `Website: ` + `</b>` + `<a href=` + e.features[0].properties.Website + `>` + `</a>`+ `</h4>`;
+                description = description + `<a href=` + e.features[0].properties.Website + `>` `School Website` + `</a>`;
               }
 
               if (e.features[0].properties['Case Study'] != '') {
